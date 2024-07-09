@@ -1,0 +1,14 @@
+## REST API - JSON
+    - GET /users - HTML Document Render
+    - GET /api/users - get all api/users
+    - GET /api/users/1 - get user with ID 1
+    - POST /api/users - Create new user
+    - PATCH /api/users/1 -  edit the user with ID 1 
+    - DELETE - /api/users/1 = Delete the user with ID 1
+
+
+## MongoDB:
+    # Connected using Mongoose 
+        - Schema: Defines the structure 
+            - Using this Schema a Model is made
+            - Using this Model we do CRUD operations 

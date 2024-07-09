@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users List</title>
+    <style>
+        body {
+            font-family: JetBrains Mono, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 40%;
+            width: 100%;
+        }
+
+        li {
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li:nth-child(even) {
+            background: #f3f3f3;
+        }
+
+        li:hover {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <% users.forEach(user=> { %>
+            <li>
+                <%= user.firstName %>
+                    <%= user.lastName %> || <%= user.email %> || <%= user.gender %> || <%= user.jobTitle %>
+            </li>
+            <% }); %>
+    </ul>
+</body>
+
+</html>

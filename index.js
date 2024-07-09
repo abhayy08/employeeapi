@@ -20,6 +20,7 @@ connectToMongoDB(process.env.MONGO_URL)
 
 //Middleware
 app.use(express.urlencoded({ extented: false }));
+app.use(express.json());
 app.use(logReqRes("log.txt"));
 
 //Routes

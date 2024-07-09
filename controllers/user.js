@@ -58,7 +58,7 @@ async function handleCreateNewUser(req, res) {
         jobTitle: body.job_title,
     });
 
-    console.log("result: ", result);
+    // console.log("result: ", result);
 
     return res.status(201).json({ message: "Success", id: result._id });
 }

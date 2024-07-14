@@ -46,7 +46,7 @@ async function handleDeleteUserById(req, res) {
 async function handleCreateNewUser(req, res) {
     const body = req.body;
 
-    if (!body || !body.first_name || !body.email || !body.gender || !body.job_title) {
+    if (!body || !body.first_name || !body.email || !body.gender || !body.job_title || !body.imageUrl) {
         return res.status(400).json({ message: "All fields are required" });
     }
     // adding user in database
@@ -56,6 +56,7 @@ async function handleCreateNewUser(req, res) {
         email: body.email,
         gender: body.gender,
         jobTitle: body.job_title,
+        imageUrl: body.imageUrl,
     });
 
     // console.log("result: ", result);

@@ -20,9 +20,12 @@ const userSchema = new mongoose.Schema({
     gender: {
         type: String,
     },
+    imageUrl: {
+        type: String,
+    }
 }, { timestamps: true });
 
 // Model
-const User = mongoose.model('user', userSchema);  
+const User = mongoose.model('user', userSchema);
 
 module.exports = User;
